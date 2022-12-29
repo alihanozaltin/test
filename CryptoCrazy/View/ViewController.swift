@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -16,6 +16,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         tableView.delegate = self
     }
+  
+}
+
+
+extension ViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
